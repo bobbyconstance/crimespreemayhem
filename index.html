@@ -76,5 +76,16 @@
     <footer>
         <p><small>Hand-coded by the filmmaker. Hosted for free on GitHub Pages.</small></p>
     </footer>
+    <script>
+    // Set the amount raised here
+    const amountRaised = 12500; // <-- change this number whenever needed
+    const fundingGoal = 65000;
+
+    const progressPercent = Math.min((amountRaised / fundingGoal) * 100, 100).toFixed(1);
+    const progressBar = document.querySelector('.progress-bar');
+
+    progressBar.style.width = `${progressPercent}%`;
+    progressBar.textContent = `$${amountRaised.toLocaleString()} Raised`;
+</script>
 </body>
 </html>
