@@ -2,8 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Short Film Fundraiser</title>
+    <title>CRIME SPREE MAYHEM</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .contribution-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .contribution-buttons a {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            font-family: sans-serif;
+        }
+
+        .etransfer {
+            background-color: #28a745;
+        }
+
+        .paypal {
+            background-color: #0070ba;
+        }
+
+        .paypal img {
+            height: 20px;
+            margin-right: 8px;
+        }
+
+        @media (max-width: 600px) {
+            .contribution-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
     <h1>CRIME SPREE MAYHEM</h1>
@@ -11,6 +50,14 @@
     <h2>Funding Goal: $65,000</h2>
     <div class="progress-container">
         <div class="progress-bar" style="width: 0%;">$0 Raised</div>
+    </div>
+
+    <div class="contribution-buttons">
+        <a href="mailto:crbobbyconstance@gmail.com" class="etransfer">Contribute via eTransfer</a>
+        <a href="https://www.paypal.com/paypalme/amprc" class="paypal">
+            <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal Logo">
+            Contribute via PayPal
+        </a>
     </div>
 
     <h3>Contributors</h3>
@@ -23,3 +70,11 @@
         <li><a href="Screenplay.pdf" target="_blank">Screenplay</a></li>
         <li><a href="PitchDeck.pdf" target="_blank">Pitch Deck</a></li>
         <li><a href="Storyboards.pdf" target="_blank">Storyboards</a></li>
+        <li><a href="Budget.pdf" target="_blank">Budget</a></li>
+    </ul>
+
+    <footer>
+        <p><small>Hand-coded by the filmmaker. Hosted for free on GitHub Pages.</small></p>
+    </footer>
+</body>
+</html>
