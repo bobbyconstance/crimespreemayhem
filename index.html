@@ -25,13 +25,13 @@
       margin: 20px auto;
       width: 90%;
       max-width: 600px;
-      height: 58.59375px; /* Increased by 25% */
+      height: 46.875px;
       overflow: hidden;
     }
 
     .progress-bar {
       height: 100%;
-      line-height: 58.59375px;
+      line-height: 46.875px;
       color: #fff;
       text-align: center;
       background-color: #7fdbff;
@@ -58,10 +58,10 @@
 
     .contribution-buttons a {
       text-decoration: none;
-      padding: 9.6px 19.2px; /* Reduced by 20% */
+      padding: 12px 24px;
       border-radius: 5px;
       color: white;
-      font-size: 0.8rem;
+      font-size: 1rem;
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -109,7 +109,7 @@
 
     .contributors {
       list-style-position: inside;
-      padding-left: 10px; /* Adjusted from 20px to 10px */
+      padding-left: 20px;
       text-align: left;
       max-width: 500px;
       margin: 0 auto;
@@ -162,7 +162,7 @@
   </div>
 
   <h3>Contributors</h3>
-  <ul class="contributors">
+  <ul class="contributors" id="contributorList">
     <li><em>No contributions yet.</em></li>
   </ul>
 
@@ -182,11 +182,23 @@
 
   <script>
     const goal = 65000;
-    const raised = 0;
+    const raised = 12000;
     const progress = Math.min((raised / goal) * 100, 100);
     const progressBar = document.getElementById("progressBar");
     progressBar.style.width = progress + "%";
     progressBar.textContent = `$${raised.toLocaleString()} Raised`;
+
+    const contributors = ["Mom"];
+    const contributorList = document.getElementById("contributorList");
+
+    if (contributors.length > 0) {
+      contributorList.innerHTML = "";
+      contributors.forEach(name => {
+        const li = document.createElement("li");
+        li.textContent = name;
+        contributorList.appendChild(li);
+      });
+    }
   </script>
 </body>
 </html>
