@@ -5,42 +5,106 @@
     <title>CRIME SPREE MAYHEM</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .contribution-buttons {
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            margin: 20px;
+            max-width: 700px;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+        }
+
+        .progress-container {
+            width: 100%;
+            background-color: #ddd;
+            border: 1px solid #000;
+            border-radius: 5px;
+            height: 30px;
+            margin-bottom: 20px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: #00d2ff; /* Sky blue/aquamarine */
+            text-align: center;
+            line-height: 30px;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .readme-button {
+            display: block;
+            margin: 20px auto 10px auto;
+            padding: 12px 24px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .buttons {
             display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
+            justify-content: center;
+            gap: 20px;
             margin: 20px 0;
         }
 
-        .contribution-buttons a {
-            display: inline-flex;
+        .button {
+            display: flex;
             align-items: center;
+            gap: 8px;
             padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
             border: none;
             border-radius: 5px;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-            font-family: sans-serif;
         }
 
-        .etransfer {
-            background-color: #28a745;
+        .etransfer-button {
+            background-color: #FFC107; /* Yellow */
         }
 
-        .paypal {
-            background-color: #0070ba;
+        .paypal-button {
+            background-color: #0070BA;
         }
 
-        .paypal img {
+        .paypal-button img {
             height: 20px;
-            margin-right: 8px;
         }
 
-        @media (max-width: 600px) {
-            .contribution-buttons {
-                flex-direction: column;
-            }
+        .film-materials {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 0 auto 30px;
+        }
+
+        .film-materials ul {
+            list-style: none;
+            padding: 0;
+            width: 48%;
+        }
+
+        .film-materials li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 14px;
+        }
+
+        a {
+            color: #0000EE;
         }
     </style>
 </head>
@@ -49,14 +113,18 @@
 
     <h2>Funding Goal: $65,000</h2>
     <div class="progress-container">
-        <div class="progress-bar" style="width: 0%;">$0 Raised</div>
+        <div class="progress-bar" id="progress-bar">$0 Raised</div>
     </div>
 
-    <div class="contribution-buttons">
-        <a href="mailto:crbobbyconstance@gmail.com" class="etransfer">Contribute via eTransfer</a>
-        <a href="https://www.paypal.com/paypalme/amprc" class="paypal">
+    <a href="#" class="readme-button">Read Me</a>
+
+    <div class="buttons">
+        <a href="https://www.interac.ca/en/consumers/products/interac-e-transfer/" class="button etransfer-button" target="_blank">
+            E-Transfer
+        </a>
+        <a href="https://www.paypal.me/amprc" class="button paypal-button" target="_blank">
             <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal Logo">
-            Contribute via PayPal
+            PayPal
         </a>
     </div>
 
@@ -66,26 +134,31 @@
     </ul>
 
     <h3>Film Materials</h3>
-    <ul>
-        <li><a href="Screenplay.pdf" target="_blank">Screenplay</a></li>
-        <li><a href="PitchDeck.pdf" target="_blank">Pitch Deck</a></li>
-        <li><a href="Storyboards.pdf" target="_blank">Storyboards</a></li>
-        <li><a href="Budget.pdf" target="_blank">Budget</a></li>
-    </ul>
+    <div class="film-materials">
+        <ul>
+            <li><a href="Screenplay.pdf" target="_blank">Screenplay</a></li>
+            <li><a href="Storyboards.pdf" target="_blank">Storyboards</a></li>
+            <li><a href="PitchDeck.pdf" target="_blank">Pitch Deck</a></li>
+        </ul>
+        <ul>
+            <li><a href="Budget.pdf" target="_blank">Budget</a></li>
+            <li><a href="ShootingSchedule.pdf" target="_blank">Shooting Schedule</a></li>
+            <li><a href="Collaborators.pdf" target="_blank">Collaborators</a></li>
+        </ul>
+    </div>
 
     <footer>
-        <p><small>Hand-coded by the filmmaker. Hosted for free on GitHub Pages.</small></p>
+        <p><small>Hand-coded by the filmmaker.</small></p>
     </footer>
+
     <script>
-    // Set the amount raised here
-    const amountRaised = 12500; // <-- change this number whenever needed
-    const fundingGoal = 65000;
+        const goal = 65000;
+        const raised = 0; // Replace with actual number
 
-    const progressPercent = Math.min((amountRaised / fundingGoal) * 100, 100).toFixed(1);
-    const progressBar = document.querySelector('.progress-bar');
-
-    progressBar.style.width = `${progressPercent}%`;
-    progressBar.textContent = `$${amountRaised.toLocaleString()} Raised`;
-</script>
+        const progressBar = document.getElementById("progress-bar");
+        const percent = Math.min((raised / goal) * 100, 100).toFixed(2);
+        progressBar.style.width = percent + "%";
+        progressBar.textContent = `$${raised.toLocaleString()} Raised`;
+    </script>
 </body>
 </html>
