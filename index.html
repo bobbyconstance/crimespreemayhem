@@ -151,9 +151,9 @@
   <a href="ReadMe.pdf" class="readme-link" target="_blank">READ ME</a>
 
   <div class="contribution-buttons">
-    <a class="interac-button" href="interac-instructions.html" target="_blank">
+    <a class="interac-button" href="interac-instructions.html" target="_blank" aria-label="Interac payment">
       <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Interac_logo_2018.svg" alt="Interac Logo" />
-      Interac
+      <!-- Removed the text "Interac" -->
     </a>
     <a class="paypal-button" href="https://www.paypal.com/paypalme/amprc" target="_blank">
       <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal Logo" />
@@ -188,7 +188,7 @@
     progressBar.style.width = progress + "%";
     progressBar.textContent = `$${raised.toLocaleString()} Raised`;
 
-    const contributors = ["Mom"];
+    const contributors = ["Anonymous"]; // changed from "Mom" to "Anonymous"
     const contributorList = document.getElementById("contributorList");
 
     if (contributors.length > 0) {
