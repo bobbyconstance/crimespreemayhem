@@ -25,13 +25,13 @@
       margin: 20px auto;
       width: 90%;
       max-width: 600px;
-      height: 46.875px;
+      height: 37.5px;
       overflow: hidden;
     }
 
     .progress-bar {
       height: 100%;
-      line-height: 46.875px;
+      line-height: 37.5px;
       color: #fff;
       text-align: center;
       background-color: #7fdbff;
@@ -39,17 +39,13 @@
       transition: width 0.5s ease-in-out;
     }
 
-    .readme-button {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      padding: 8.8px 17.6px;
-      font-size: 0.8rem;
-      background-color: #333;
-      color: white;
-      border: none;
-      border-radius: 6px;
+    .readme-link {
+      display: block;
+      margin: 20px auto 0 auto;
+      font-size: 1rem;
+      color: #007bff;
+      text-decoration: underline;
       cursor: pointer;
-      text-transform: uppercase;
     }
 
     .contribution-buttons {
@@ -98,19 +94,18 @@
       background-color: #fff;
       border: 1px solid #ccc;
       border-radius: 5px;
-      color: #333;
+      color: #007bff;
       text-decoration: none;
-      transition: all 0.2s ease-in-out;
+      transition: transform 0.2s ease;
     }
 
     .film-materials a:hover {
-      color: #007bff;
       transform: scale(1.05);
     }
 
     .contributors {
       list-style-position: inside;
-      padding-left: 20px;
+      padding-left: 0;
       text-align: left;
       max-width: 500px;
       margin: 0 auto;
@@ -131,7 +126,6 @@
 
       .contributors {
         text-align: center;
-        padding-left: 0;
       }
 
       footer {
@@ -149,12 +143,10 @@
     <div class="progress-bar" id="progressBar">$0 Raised</div>
   </div>
 
-  <button class="readme-button">READ ME</button>
+  <a href="ReadMe.pdf" class="readme-link" target="_blank">READ ME</a>
 
   <div class="contribution-buttons">
-    <a class="interac-button" href="https://etransfer.interac.ca" target="_blank">
-      Interac E-Transfer
-    </a>
+    <a class="interac-button" href="interac-instructions.html" target="_blank">Interac</a>
     <a class="paypal-button" href="https://www.paypal.com/paypalme/amprc" target="_blank">
       <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal Logo" />
       PayPal
