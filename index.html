@@ -25,18 +25,31 @@
       margin: 20px auto;
       width: 90%;
       max-width: 600px;
-      height: 30px;
+      height: 37.5px;
       overflow: hidden;
     }
 
     .progress-bar {
       height: 100%;
-      line-height: 30px;
+      line-height: 37.5px;
       color: #fff;
       text-align: center;
       background-color: #7fdbff;
       width: 0%;
       transition: width 0.5s ease-in-out;
+    }
+
+    .readme-button {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 11px 22px;
+      font-size: 1rem;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-transform: uppercase;
     }
 
     .contribution-buttons {
@@ -89,27 +102,34 @@
       text-decoration: none;
     }
 
-    .readme-button {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      padding: 14px 28px;
-      font-size: 1.2rem;
-      background-color: #333;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
+    .contributors {
+      list-style-position: inside;
+      padding-left: 0;
+      text-align: left;
+      max-width: 500px;
+      margin: 0 auto;
     }
 
     footer {
       margin-top: 50px;
       font-size: 0.85rem;
       color: #666;
+      text-align: left;
+      padding-left: 20px;
     }
 
     @media (max-width: 500px) {
       h1 {
         font-size: 1.8rem;
+      }
+
+      .contributors {
+        text-align: center;
+      }
+
+      footer {
+        text-align: center;
+        padding-left: 0;
       }
     }
   </style>
@@ -122,10 +142,10 @@
     <div class="progress-bar" id="progressBar">$0 Raised</div>
   </div>
 
-  <button class="readme-button">Read Me</button>
+  <button class="readme-button">READ ME</button>
 
   <div class="contribution-buttons">
-    <a class="interac-button" href="https://www.interac.ca/en/consumers/products/interac-e-transfer/" target="_blank">
+    <a class="interac-button" href="https://etransfer.interac.ca" target="_blank">
       Interac E-Transfer
     </a>
     <a class="paypal-button" href="https://www.paypal.com/paypalme/amprc" target="_blank">
