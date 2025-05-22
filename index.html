@@ -25,13 +25,13 @@
       margin: 20px auto;
       width: 90%;
       max-width: 600px;
-      height: 37.5px;
+      height: 58.59375px; /* Increased by 25% */
       overflow: hidden;
     }
 
     .progress-bar {
       height: 100%;
-      line-height: 37.5px;
+      line-height: 58.59375px;
       color: #fff;
       text-align: center;
       background-color: #7fdbff;
@@ -58,17 +58,21 @@
 
     .contribution-buttons a {
       text-decoration: none;
-      padding: 12px 24px;
+      padding: 9.6px 19.2px; /* Reduced by 20% */
       border-radius: 5px;
       color: white;
-      font-size: 1rem;
+      font-size: 0.8rem;
       display: inline-flex;
       align-items: center;
       gap: 8px;
     }
 
     .interac-button {
-      background-color: #ffc107;
+      background-color: #ffcc00;
+    }
+
+    .interac-button img {
+      height: 20px;
     }
 
     .paypal-button {
@@ -105,7 +109,7 @@
 
     .contributors {
       list-style-position: inside;
-      padding-left: 0;
+      padding-left: 10px; /* Adjusted from 20px to 10px */
       text-align: left;
       max-width: 500px;
       margin: 0 auto;
@@ -126,6 +130,7 @@
 
       .contributors {
         text-align: center;
+        padding-left: 0;
       }
 
       footer {
@@ -146,7 +151,10 @@
   <a href="ReadMe.pdf" class="readme-link" target="_blank">READ ME</a>
 
   <div class="contribution-buttons">
-    <a class="interac-button" href="interac-instructions.html" target="_blank">Interac</a>
+    <a class="interac-button" href="interac-instructions.html" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Interac_logo_2018.svg" alt="Interac Logo" />
+      Interac
+    </a>
     <a class="paypal-button" href="https://www.paypal.com/paypalme/amprc" target="_blank">
       <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal Logo" />
       PayPal
@@ -174,7 +182,7 @@
 
   <script>
     const goal = 65000;
-    const raised = 0; // Change this dynamically as needed
+    const raised = 0;
     const progress = Math.min((raised / goal) * 100, 100);
     const progressBar = document.getElementById("progressBar");
     progressBar.style.width = progress + "%";
