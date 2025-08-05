@@ -95,7 +95,7 @@ footer {
     text-align: center;
 }
 
-/* --- EXISTING MOBILE STYLES --- */
+/* --- Existing mobile styles --- */
 @media (max-width: 600px) {
     .payment-buttons {
         flex-direction: column;
@@ -108,7 +108,7 @@ footer {
     }
 }
 
-/* --- NEW SECTION & IMAGE RESPONSIVE STYLES --- */
+/* --- New image sections and link styling --- */
 section {
     position: relative;
     width: 100%;
@@ -118,7 +118,6 @@ section {
     background-repeat: no-repeat;
 }
 
-/* Hero and scroll sections */
 #hero {
     background-image: url('0.jpeg');
 }
@@ -131,7 +130,6 @@ section {
     padding-bottom: 60px;
 }
 
-/* Grid for document links */
 .link-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -167,10 +165,11 @@ section {
     box-shadow: 0 0 20px #0f0;
 }
 
-/* Mobile fix for image scaling and layout stacking */
+/* --- FINAL mobile fix for background images and layout --- */
 @media (max-width: 768px) {
-    section {
-        background-size: contain;
+    #hero,
+    #second {
+        background-size: contain !important;
         background-repeat: no-repeat;
         background-position: center center;
         background-color: #000;
