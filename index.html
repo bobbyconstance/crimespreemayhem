@@ -5,84 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CRIME SPREE MAYHEM</title>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body, html {
-      height: 100%;
-      font-family: 'Share Tech Mono', monospace;
-      background-color: #000;
-      color: #0f0;
-      scroll-behavior: smooth;
-    }
-
-    section {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-size: cover;
-      background-position: center;
-    }
-
-    #hero {
-      background-image: url('0.jpeg');
-    }
-
-    #second {
-      background-image: url('1.jpg');
-      flex-direction: column;
-      justify-content: flex-end;
-      padding-bottom: 60px;
-    }
-
-    .link-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-top: 30px;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 20px;
-      border-radius: 10px;
-      width: 90%;
-      max-width: 900px;
-    }
-
-    .link-grid a {
-      text-align: center;
-      padding: 15px;
-      background-color: #111;
-      border: 1px solid #0f0;
-      border-radius: 5px;
-      color: #0f0;
-      text-decoration: none;
-      font-size: 1.1rem;
-      transition: all 0.2s ease;
-      text-transform: uppercase;
-      box-shadow: 0 0 6px #0f0;
-    }
-
-    .link-grid a:hover {
-      background-color: #0f0;
-      color: #000;
-      transform: scale(1.05);
-      box-shadow: 0 0 20px #0f0;
-    }
-
-    .hidden {
-      display: none;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Hero section with full-screen background -->
   <section id="hero"></section>
 
+  <!-- Second section with background image and resource links -->
   <section id="second">
     <div class="link-grid">
       <a href="Screenplay.pdf" target="_blank">Screenplay</a>
@@ -94,8 +24,8 @@
     </div>
   </section>
 
+  <!-- Fundraising section (hidden but preserved) -->
   <div class="hidden">
-    <!-- Previously visible fundraising content -->
     <h2>Funding Goal: $65,000</h2>
     <div class="progress-container">
       <div class="progress-bar" id="progressBar">$0 Raised</div>
@@ -112,5 +42,6 @@
       <li><em>No contributions yet.</em></li>
     </ul>
   </div>
+
 </body>
 </html>
