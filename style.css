@@ -29,6 +29,7 @@ section {
   justify-content: flex-end;
   padding-bottom: 60px;
   height: auto;
+  position: relative; /* allows absolute children like the laurel */
 }
 
 .link-grid {
@@ -64,6 +65,20 @@ section {
   color: #000;
   transform: scale(1.05);
   box-shadow: 0 0 20px #0f0;
+}
+
+/* Austin Film Festival Laurel */
+.aff-laurel {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: 10;
+}
+
+.aff-laurel img {
+  width: 140px;
+  height: auto;
+  opacity: 0.9;
 }
 
 /* Fundraising section — HIDDEN */
